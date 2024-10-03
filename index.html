@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Bluebikes Stations</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script type="module" src="./scripts/main.js"></script>
+  </head>
+
+  <body>
+    <div id="select-div">
+      <button id="info-box-open">i</button>
+      <dialog id="info-box">
+        <p>
+          This map shows <a href="https://bluebikes.com/" target="_blank">Bluebikes</a> stations that are currently in service. Click on a 
+          point or select a station from the drop down to view the number of bikes 
+          and docks available. 
+        </p>
+        <p id="disclaimer"><em>This website is not affiliated with Bluebikes or Lyft.</em></p>
+        <button id="info-box-close">X</button>
+      </dialog>
+
+      <label for="station-select"></label>
+      <select name="stations" id="station-select"></select>
+    </div>
+    <div id="station-stats"></div>
+    <div id="map"></div>
+  </body>
+  <footer>
+    <a href="https://www.linkedin.com/in/phil--white/" id="linkedin-footer" target="_blank"><img src="./images/LinkedIn.png" alt="LinkedIn icon" height="16px"></a>
+    <a href="" id="source-footer" target="_blank"><img src="./images/GitHub.png" alt="GitHub icon" height="16px"></a>
+    <a href="https://bluebikes.com/" id="bluebikes-footer" target="_blank"><img src="./images/BlueBikes.png" alt="Blue Bikes icon" height="16px"></a>
+  </footer>
+</html>

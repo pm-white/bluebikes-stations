@@ -1,0 +1,117 @@
+:root {
+  --main-blue: #4AA1DF;
+  --accent-blue: #294189;
+  --linkedin--blue: #0A66C2;
+  --light-blue: #74B7E7;
+}
+
+html, body {
+  height: calc(100% - 29px);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#select-div {
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--main-blue);
+  border-bottom: 4px var(--accent-blue) solid;
+}
+
+select {
+  font-size: 16px;
+  color: white;
+  background-color: var(--main-blue);
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#update-time {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  border-radius: 0;
+  opacity: 0.95;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper pre {
+  /* margin: 0.6em 0 0.6em 0; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper #update-time {
+  margin-top: 1em;
+}
+
+
+.leaflet-popup .leaflet-popup-tip {
+  border-radius: 0;
+  opacity: 0.95;
+}
+
+footer {
+  z-index: 2;
+  position: fixed;
+  bottom: 0px;
+  padding: 5px;
+  background-color: rgba(255 255 255 / 70%);
+}
+
+footer a {
+  margin: 0px 2px 0px 2px
+}
+
+dialog {
+  border: 3px solid var(--main-blue);
+  max-width: 40%;
+  text-align: left;
+}
+
+#info-box-open {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: white;
+  background-color: var(--main-blue);
+  border: 2px solid white;
+  border-radius: 15%;
+  cursor: pointer;
+}
+
+#info-box-open:hover {
+  background-color: var(--accent-blue);
+}
+
+#info-box-close {
+  font-size: 0.6rem;
+  position: absolute;
+  top: 5%;
+  right: 1.5%;
+  color: white;
+  border-radius: 15%;
+  background-color: var(--main-blue);
+  border: none;
+  cursor: pointer;
+}
+
+#info-box-close:hover {
+  color: white;
+  border-radius: 15%;
+  background-color: var(--light-blue);
+  border: 1px solid var(--main-blue);
+}
+
+#disclaimer {
+  font-size: 0.8rem;
+  text-align: center;
+}
