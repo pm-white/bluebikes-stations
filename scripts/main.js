@@ -42,8 +42,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const stnPoint = L.circleMarker([stn.lat, stn.lon], defaultStyle);
 
     // add name of stationa as a property, then add to the feature group
-    stnPoint.stationName = stn.name;
-    stnPoint.bindTooltip(`<strong>${stnPoint.stationName}</strong>`);
+    if (window.matchMedia("(max-width: 600px)")) {
+      stnPoint.bindTooltip(`<strong>${stn.name}</strong>`);
+    }
     stnPoint.addTo(stationsFeatureGroup);
   }
 
@@ -70,8 +71,7 @@ stationSelect.addEventListener("change", async () => {
         .bindPopup(
           `
           <h3>${stnInfo.name}</h3>
-          <pre>eBikes: ${stnInfo.num_ebikes_available} | Classic: ${
-            stnInfo.num_bikes_available - stnInfo.num_ebikes_available
+          <pre>eBikes: ${stnInfo.num_ebikes_available} | Classic: ${stnInfo.num_bikes_available - stnInfo.num_ebikes_available
           } | Docks: ${stnInfo.num_docks_available}</pre>
           <p id="update-time">${timeSinceUpdate(stnInfo.last_reported)}</p>
           `
@@ -90,8 +90,7 @@ async function stationPointInfo(e) {
     .bindPopup(
       `
     <h3>${stnInfo.name}</h3>
-    <pre>eBikes: ${stnInfo.num_ebikes_available} | Classic: ${
-        stnInfo.num_bikes_available - stnInfo.num_ebikes_available
+    <pre>eBikes: ${stnInfo.num_ebikes_available} | Classic: ${stnInfo.num_bikes_available - stnInfo.num_ebikes_available
       } | Docks: ${stnInfo.num_docks_available}</pre>
     <p id="update-time">${timeSinceUpdate(stnInfo.last_reported)}</p>
     `
