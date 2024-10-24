@@ -42,8 +42,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const stnPoint = L.circleMarker([stn.lat, stn.lon], defaultStyle);
 
     // add name of stationa as a property, then add to the feature group
-    if (window.matchMedia("(max-width: 600px)")) {
-      stnPoint.bindTooltip(`<strong>${stn.name}</strong>`);
+    stnPoint.stationName = stn.name;
+    if (window.matchMedia("(min-width: 600)")) {
+      stnPoint.bindTooltip(`<strong>${stnPoint.stationName}</strong>`);
+
     }
     stnPoint.addTo(stationsFeatureGroup);
   }
